@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8"> <!-- Ensure UTF-8 encoding -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Punjabi Alphabet Sequencing Game</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Gurmukhi:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f7f7f7;
+            font-family: 'Noto Sans Gurmukhi', sans-serif;
+        }
+        #alphabet-container, #target-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+        .draggable {
+            user-select: none;
+            width: 40px; /* Default size */
+            height: 40px;
+            border: 1px solid black;
+            text-align: center;
+            line-height: 40px;
+            cursor: pointer;
+        }
+        #target-container {
+            min-height: 50px;
+            border: 2px dashed grey;
+            padding: 10px;
+            flex-wrap: wrap;
+            width: 90%; /* Use a percentage-based width */
+            max-width: none; /* Remove the max-width limit */
+            margin: 0 auto; /* Center the container */
+        }
+
+        #reset-button {
+            margin-top: 20px;
+        }
+
+        /* Smaller tablets and large smartphones (landscape view) */
+        @media (max-width: 768px) {
+            .draggable {
+                width: 35px;
+                height: 35px;
+                line-height: 35px;
+            }
+        }
+
+        /* Smaller smartphones */
+        @media (max-width: 480px) {
+            .draggable {
+                width: 30px;
+                height: 30px;
+                line-height: 30px;
+            }
+            #target-container {
+                max-width: 100%;
+            }
+        }
+
+    </style>
+</head>
+<body class="container pt-4">
+    <h1 class="text-center mb-4">ਪੈਂਤੀ ਸਿੱਖੋ</h1>
+    <h3 class="text-center mb-4">ਅੱਖਰ ਧੂਹ ਕੇ ਸਹੀ ਤਰਤੀਬ ਵਿੱਚ ਲਾਓ। </h3>
+    <div id="alphabet-container" class="justify-content-center"></div>
+    <div id="target-container" class="justify-content-center p-2"></div>
+    <button id="reset-button" class="btn btn-primary">ਦੁਬਾਰਾ ਸ਼ੁਰੂ</button>
+    <h5 class="text-center mb-4">ਗੁਰਤੇਜ ਸਿੰਘ, ਵੈਲਿੰਗਟਨ - ਨਿਊਜ਼ੀਲੈਂਡ </h5>
+    <audio id="wrong-audio" src="wrong.mp3"></audio>
+    <script src="game.js"></script>
+</body>
+</html>
