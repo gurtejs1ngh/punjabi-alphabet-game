@@ -45,14 +45,6 @@ document.addEventListener('DOMContentLoaded', () => {
         e.preventDefault();
     }
 
-    // Touch event handlers (the code you need to add)
-function touchMoved() {
-  // The 'touches' array holds information for all active touches
-  if (touches.length > 0) {
-    let x = touches[0].x; // Get the x coordinate of the first touch
-    let y = touches[0].y; // Get the y coordinate of the first touch
-    handleTouch(x, y);
-  }
 
     function handleDragOver(e) {
         e.preventDefault(); // Necessary for drop to work
@@ -80,5 +72,6 @@ function touchMoved() {
 
     initializeGame();
 });
+
 
 
